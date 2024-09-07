@@ -1,4 +1,6 @@
 streamlit
+torch
+transformers
 groq
 Pillow
 python-dotenv
