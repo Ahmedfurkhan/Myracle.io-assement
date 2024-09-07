@@ -4,7 +4,7 @@ from PIL import Image
 
 # Initialize Groq client
 groq_client = Groq(
-    api_key="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",
+    api_key="gsk_PdFpJTXZU4DfBaotVJwwWGdyb3FYKHpivtYkyU9XWgj",
 )
 
 # Model selection
