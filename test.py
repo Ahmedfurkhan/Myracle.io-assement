@@ -1,10 +1,15 @@
 import streamlit as st
 from groq import Groq
 from PIL import Image
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Initialize Groq client
 groq_client = Groq(
-    api_key="gsk_PdFpJTXZU4DfBaotVJwwWGdyb3FYKHpivtYkyU9XWgj",
+    api_key=os.getenv("GROQ_API_KEY"),
 )
 
 # Model selection
@@ -73,5 +78,5 @@ if st.button("Generate Testing Instructions"):
         st.error("Please upload at least one screenshot to proceed.")
 
 # Add a footer with information about the model used
-#st.markdown("---")
-#st.write(f"This app uses Groq's API with the {selected_model} model to generate testing instructions.")
+st.markdown("---")
+st.write(f"This app uses Groq's API with the {selected_model} model to generate testing instructions.")
